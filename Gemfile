@@ -10,7 +10,7 @@ gem "rails", "~> 8.1.1"
 gem "sqlite3", ">= 1.6"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma", ">= 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -55,5 +55,12 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :test do
+  gem 'simplecov', require: false
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
+  gem 'shoulda-matchers'
 end
 
